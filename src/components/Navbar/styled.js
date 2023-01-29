@@ -40,9 +40,9 @@ export const LogoTitle = styled.div`
   align-items: center;
   gap: 11.62px;
   cursor: pointer;
-  @media screen and (max-width: 770px) {
+  /* @media screen and (max-width: 770px) {
     margin-left: 30px;
-  }
+  } */
 `;
 export const activeStyle = ({ isActive }) => {
   return {

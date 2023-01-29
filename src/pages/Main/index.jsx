@@ -1,9 +1,13 @@
 import React from 'react'
-import Home from '../../components/Home'
+import Caroucels from '../../components/Carucel'
+// import Home from '../../components/Home'
+import { Container } from './styled'
 
 const HomePage = () => {
   return (
-    <div><Home/></div>
+    <Container>
+      <Caroucels/>
+    </Container>
   )
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 
 import Generic from "../components/Geniric/Geniric";
+import HomePage from "../pages/Main";
 // import HomePage from "../pages/Home";
 // import PropertiesPage from "../pages/Properties";
 // import SelectedHouse from "../components/SelectedHouse";
@@ -15,7 +16,7 @@ export const navbar = [
     id: 1,
     title: "Home",
     path: "/home",
-    element: <Generic />,
+    element: <HomePage />,
     search: "?",
     hidden: false,
     private: false,
