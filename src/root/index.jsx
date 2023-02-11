@@ -1,33 +1,21 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import { navbar } from "../utils/navbar";
 import Navbar from "../components/Navbar";
-import { navbar } from "../untils/navbar";
-import { Container } from "./styled";
-const Root = () => {
+
+export const Root = () => {
   return (
-    <Container>
+    <>
       <Routes>
-        <Route path="/" element={<Navigate to={"/home"} />} />
-        <Route>
-          {navbar.map(({ path, element, id, hidden, useParams }) => {
-            return (
-              !useParams &&
-              hidden && <Route key={id} path={path} element={element} />
-            );
-          })}
-        </Route>
         <Route element={<Navbar />}>
-          {navbar.map(({ id, hidden, path, element, useParams }) => {
-            return (
-              (useParams || !hidden) && (
-                <Route key={id} path={path} element={element} />
-              )
-            );
+          {navbar.map(({ path, element, id }) => {
+            return <Route key={id} path={path} element={element} />;
           })}
         </Route>
-        <Route path="*" element={<h1>Not Found</h1>} />
+        <Route path="*" element={<h1>404 NOT FOUND</h1>} />
+        <Route path="/" element={<Navigate to={"/home"} />} />
       </Routes>
-    </Container>
+    </>
   );
 };
 
